@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 @Page
 public class FlightPage extends Base {
 
-    @FindBy(css = "nav.rlGvde a")
+    @FindBy(css = "nav.P6Wwdb.OE019d button")
     private List<WebElement> elements;
 
     public void goTo(final String url){
