@@ -1,6 +1,7 @@
 package com.demo.ssandeep.spring.springselenium.page.google;
 
 import com.demo.ssandeep.spring.springselenium.kelvin.annotation.PageFragment;
+import com.demo.ssandeep.spring.springselenium.kelvin.annotation.TakeScreenshot;
 import com.demo.ssandeep.spring.springselenium.page.Base;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -17,6 +18,7 @@ public class SearchComponent extends Base {
     @FindBy(name = "btnK")
     private List<WebElement> searchBtns;
 
+    @TakeScreenshot
     public void search(final String keyword){
         this.searchBox.sendKeys(keyword);
         this.searchBox.sendKeys(Keys.TAB);
@@ -29,6 +31,6 @@ public class SearchComponent extends Base {
 
     @Override
     public boolean isAt() {
-        return this.wait.until((d) -> this.searchBox.isDisplayed());
+        return this.wait.until(d -> this.searchBox.isDisplayed());
     }
 }

@@ -6,8 +6,8 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
         features = "classpath:features",
-        glue = "com.udemy.spring.springselenium.bdd",
-        tags =  "@visa",
+        glue = "com.demo.ssandeep.spring.springselenium.bdd",
+        tags =  "@google",
         plugin = {
                 "pretty",
                 "html:target/index.html"
